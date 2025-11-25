@@ -1,0 +1,30 @@
+Cluster Profiles (trip-based segmentation)
+=========================================
+
+Cluster 0
+Jumlah trip : 67140
+  avg_booking_value : 337.74
+  avg_ride_distance : 16.66
+  avg_driver_ratings : 4.23
+  avg_customer_rating : 4.41
+  avg_avg_vtat : 8.43
+  avg_avg_ctat : 29.18
+
+Cluster 1
+Jumlah trip : 35177
+  avg_booking_value : 340.66
+  avg_ride_distance : 16.76
+  avg_driver_ratings : 4.23
+  avg_customer_rating : 4.41
+  avg_avg_vtat : 8.48
+  avg_avg_ctat : 29.19
+
+Cluster 2
+Jumlah trip : 46450
+  avg_booking_value : 340.52
+  avg_ride_distance : 16.89
+  avg_driver_ratings : 4.23
+  avg_customer_rating : 4.4
+  avg_avg_vtat : 8.44
+  avg_avg_ctat : 29.11
+

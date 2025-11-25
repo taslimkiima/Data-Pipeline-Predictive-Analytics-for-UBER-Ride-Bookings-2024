@@ -1,0 +1,10 @@
+streamlit==1.22.0
+pandas==2.3.3
+numpy==1.23.5
+matplotlib==3.10.7
+seaborn==0.13.2
+scikit-learn==1.7.2
+prophet==1.2.1
+joblib==1.5.2
+plotly==5.8.0
+pyarrow==11.0.0
