@@ -14,7 +14,6 @@ import matplotlib.pyplot as plt
 
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-
 from preprocessing_segmentation import prepare_segmentation_data
 
 # Direktori input (dari preprocessing.py)
@@ -26,7 +25,6 @@ FEAT_PATH = os.path.join(OUT_DIR, "feature_names.json")
 # Direktori khusus untuk hasil segmentasi
 OUT_SEG = "outputs_segmentation"
 os.makedirs(OUT_SEG, exist_ok=True)
-
 
 def _save_cluster_plots_pca(X, labels, filename="cluster_pca_scatter.png"):
     """
@@ -49,7 +47,6 @@ def _save_cluster_plots_pca(X, labels, filename="cluster_pca_scatter.png"):
     plt.close()
     print(f"💾 PCA scatter plot disimpan → {save_path}")
 
-
 def _compute_feature_importance(model: KMeans, feature_names: list, top_n: int = 30):
     """
     Hitung 'importance' berdasarkan rentang centroid per fitur.
@@ -71,7 +68,6 @@ def _compute_feature_importance(model: KMeans, feature_names: list, top_n: int =
     print(f"💾 Feature importance (top {top_n}) disimpan → {out_path}")
 
     return top_imp
-
 
 def _save_cluster_profiles_text(df_seg: pd.DataFrame, numeric_cols: list):
     """
@@ -98,7 +94,6 @@ def _save_cluster_profiles_text(df_seg: pd.DataFrame, numeric_cols: list):
             f.write("\n")
     print(f"💾 Cluster profile text disimpan → {txt_path}")
 
-
 def run_segmentation(
     k: int = 3,
     filter_completed_only: bool = False,
@@ -109,7 +104,6 @@ def run_segmentation(
     """
     Jalankan trip-based segmentation (KMeans) menggunakan preprocessor dan feature names
     yang sudah dibuat di preprocessing.py.
-
     Params
     ------
     k : int
@@ -122,7 +116,6 @@ def run_segmentation(
         Seed untuk KMeans.
     save_csv : bool
         Jika True, simpan hasil segmentasi ke outputs_segmentation/segmented_trips.csv
-
     Return
     ------
     df_seg : DataFrame
@@ -132,7 +125,6 @@ def run_segmentation(
     feature_names : list[str]
         Nama fitur yang digunakan dalam X (hasil preprocessor)
     """
-
     # --------------------------------------------------------
     # 1) Cek keberadaan artefak preprocessing
     # --------------------------------------------------------
@@ -283,4 +275,3 @@ if __name__ == "__main__":
     ]
     print("\nPreview hasil:")
     print(df_seg[cols_preview].head())
-
